@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+    
+    .info-section {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .info-section p {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    
+    .info-section p:last-child {
+      margin-bottom: 0;
+    }
+    
+    a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    .form-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 86%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .header {
+        padding: 30px 20px;
+      }
+      
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .content {
+        padding: 20px;
+      }
+      
+      .info-section {
+        padding: 15px;
+      }
+      
+      .info-section p {
+        font-size: 1rem;
+      }
+      
+      .form-container {
+        padding-bottom: 120%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.5rem;
+      }
+      
+      .form-container {
+        padding-bottom: 150%;
+      }
+    }
+    
+    .faq-section {
+      margin-bottom: 30px;
+    }
+    
+    .faq-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .faq-item {
+      background: white;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      border-color: #667eea;
+    }
+    
+    .faq-question {
+      width: 100%;
+      padding: 18px 20px;
+      background: white;
+      border: none;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s ease;
+    }
+    
+    .faq-question:hover {
+      background: #f8f9fa;
+    }
+    
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #667eea;
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-question.active::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 20px;
+      background: #f8f9fa;
+    }
+    
+    .faq-answer.active {
+      max-height: 500px;
+      padding: 20px;
+    }
+    
+    .faq-answer p {
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+    
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Clarifier Support</h1>
+    </div>
+    
+    <div class="content">
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <button class="faq-question">How do I get a refund?</button>
+          <div class="faq-answer">
+            <p>You can request a refund directly from Apple.</p>
+            <p>Open this link: <a href="https://reportaproblem.apple.com" target="_blank">https://reportaproblem.apple.com</a></p>
+            <p>Sign in → Choose the purchase → Select "Request a refund".</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">I didn't receive my purchase</button>
+          <div class="faq-answer">
+            <p>Restart the app → open the purchase screen → tap "Restore purchases".</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">The app isn't working</button>
+          <div class="faq-answer">
+            <p>Force-close the app → update to the latest version → restart your device.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCmLWgI0aoXoMfmy23mrRSZ6a09ZACq9uyNwPi0f0Exok5mw/viewform?embedded=true" marginheight="0" marginwidth="0">Загрузка…</iframe>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const isActive = button.classList.contains('active');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-question').forEach(btn => {
+          btn.classList.remove('active');
+          btn.nextElementSibling.classList.remove('active');
+        });
+        
+        // Toggle current FAQ
+        if (!isActive) {
+          button.classList.add('active');
+          answer.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
